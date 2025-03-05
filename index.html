@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-size: 2em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Development - OSINT.ing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'pulse': 'pulse 2s ease-in-out infinite',
+            'flip': 'flip 1s ease-in-out',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            pulse: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.05)' },
+            },
+            flip: {
+              '0%': { transform: 'rotateY(0)' },
+              '100%': { transform: 'rotateY(360deg)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .bg-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  </style>
 </head>
-<div class="container">
-    <h1>eljefe was here >.< </h1>
-</div>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen flex flex-col bg-pattern">
+  <header class="p-6 text-center">
+    <div class="text-4xl font-bold inline-flex items-center gap-2 hover:animate-flip cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-110">
+      <i class="fas fa-shield-alt text-blue-400"></i>
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">DataHunt.xyz</span>
+    </div>
+  </header>
+
+  <main class="flex-1 flex justify-center items-center p-4">
+    <div class="max-w-2xl w-full text-center p-8 rounded-2xl shadow-2xl animate-float backdrop-blur-md bg-white bg-opacity-10 border border-white border-opacity-20">
+      <h1 class="text-5xl font-extrabold mb-6 flex items-center justify-center">
+        <i class="fas fa-code text-blue-400 mr-3 transform -rotate-12"></i>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Under Development</span>
+      </h1>
+      <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+        Exciting things are brewing! We're crafting a powerful OSINT platform to revolutionize your intelligence gathering. Stay tuned for groundbreaking features and unparalleled insights.
+      </p>
+      <a href="https://discord.gg/bV7YFHy6" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full inline-flex items-center gap-3 transition duration-300 ease-in-out transform hover:scale-105 animate-pulse shadow-lg">
+        <i class="fab fa-discord text-2xl"></i>
+        <span>Join Our Discord Community</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="text-center p-6 text-gray-400 text-sm">
+    <p>&copy; 2025 DataHunt.xyz - Empowering Intelligence</p>
+  </footer>
+</body>
 </html>
